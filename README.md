@@ -1,37 +1,48 @@
-How To Run
+How To Use
 ==========
 
-1. Make sure you have opencv setup on your machine.
-2. Unzip the folder
-3. cd into ../facerec dir and run "python run.py"
+'cd' into your favourite project directory and clone the project.
 
-Configuration
-=============
-All the configuration settings needed are provided in the settings.py file.
-(Incase more options are required will be added here.)
+    git clone https://github.com/heaven00/face-classiffier.git
 
-1. LABEL_MAP = A dictionary for mapping labels. This should contain -1 key always,
-            you may set the value as you desire (The value will be displayed in case
-            face is not recoganized).
 
-2. VALIDATION_SET = Path to the validation set used. default is "data/validation_images"
+well we have the code now we need to setup the data. The training data needs to be in a particular order.
 
-3. MODEL = This helps in choosing between eigen and fisher model. The value should always
-        be either "fisher" or "eigen"
+    cd data
+    mkdir train_images
+    mkdir validation_images
 
-4. COMPONENTS = This sets the number of components used in the model.
-            NOTE: This only works with "eigen" model
+the name of the folders can be changed to anything, but that has to be set in the settings.py accordingly. "*train_images*" will contain your training data and "*validatoin_images*" will contain your validation set.
 
-5. THRESHOLD = Sets the threshold value for the chosen model. Ideal configuration with
-            eigen is 5000.0 and with fiser is 123.0 (Havent really toyed around with fisher yet.)
+More information on the structure of the folder can be found in the folders itself.
 
-6. TEXT_COLOR = Set the color of the text to be displayed on the video feed.
 
-7. RECT_COLOR = Set the color of the rectangle to be displayed.
+After setting up the data, 
+        
+        python run.py
 
-8. LEARNING_MODE = If this is set to true you will be able to add images to male or female training data by pressing
-		'm'/'M' for male and 'f'/'F' for female.
+Incase you see an error, please report it. Thanks :)
 
-Remarks
-=======
-The recognition is at optimal configuration known to me so far, but you are free to toy around.
+REQUIREMENT
+-----------
+
+
+You need python 2.7, opencv, numpy & pandas running perfectly on your machine.
+
+For py 2.7, numpy, pandas its easier to just install Anaconda if you are on Windows, if you are on linux well I trust you already know what to do. :) :fingers_crosses:
+
+Now, to setup opencv get a [prebuilt version](http://www.lfd.uci.edu/~gohlke/pythonlibs/#opencv) and install it using wheel.
+
+If you don't have wheel do
+
+    pip install wheel
+
+
+ and then install the downloaded python version using
+
+    pip install path/to/the/file.whl
+
+
+A working zipped version is available [here] (https://www.dropbox.com/s/vpxd5rscgarp07p/Video-Analyzer.zip?dl=0) for reference.
+
+Feel free to raise issues or any ideas you have regarding video analysis. Cheers :)
