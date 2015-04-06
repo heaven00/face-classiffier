@@ -43,6 +43,3 @@ If you don't have wheel do
     pip install path/to/the/file.whl
 
 
-A working zipped version is available [here] (https://www.dropbox.com/s/vpxd5rscgarp07p/Video-Analyzer.zip?dl=0) for reference.
-
-Feel free to raise issues or any ideas you have regarding video analysis. Cheers :)
